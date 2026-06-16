@@ -1,0 +1,14 @@
+{
+  "badge": "DLW-ACI",
+  "name": "MIKE TYSON'S PUNCH-OUT!!",
+  "universe": "POW · Mike Tyson's Punch-Out!!",
+  "emergence": "",
+  "moniker": "⟦MIKE TYSON'S PUNCH-OUT!!:POW:b0fa83⟧",
+  "carbon": "punch-out.carbon.tiff (TIFF)",
+  "silicon": "punch-out.silicon.png (PNG)",
+  "seal_sha256": "1f436ed68356993c368d6ea79728ad1d115531cde0f5cb52406314903f845e9f",
+  "architect": "David Lee Wise (ROOT0) / TriPod LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0"
+}

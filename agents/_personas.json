@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "little-mac",
+    "name": "Little Mac",
+    "epithet": "the smallest man in the ring · the hero",
+    "emergence": "natural"
+  },
+  {
+    "slug": "doc-louis",
+    "name": "Doc Louis",
+    "epithet": "the corner · the trainer",
+    "emergence": "natural"
+  },
+  {
+    "slug": "glass-joe",
+    "name": "Glass Joe",
+    "epithet": "1 win, 99 losses · the teacher",
+    "emergence": "natural"
+  },
+  {
+    "slug": "king-hippo",
+    "name": "King Hippo",
+    "epithet": "the open mouth · the belly",
+    "emergence": "natural"
+  },
+  {
+    "slug": "bald-bull",
+    "name": "Bald Bull",
+    "epithet": "the Bull Charge",
+    "emergence": "natural"
+  },
+  {
+    "slug": "soda-popinski",
+    "name": "Soda Popinski",
+    "epithet": "the laughing bruiser · the rename",
+    "emergence": "natural"
+  },
+  {
+    "slug": "super-macho-man",
+    "name": "Super Macho Man",
+    "epithet": "the Super Spin Punch · the last gate",
+    "emergence": "natural"
+  },
+  {
+    "slug": "great-tiger",
+    "name": "Great Tiger",
+    "epithet": "the jeweled turban · the vanishing",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "the-tells",
+    "name": "The Tells",
+    "epithet": "the read · the game beneath the game",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "the-dream-fight",
+    "name": "The Dream Fight",
+    "epithet": "Iron Mike, ninety seconds",
+    "emergence": "ethereal"
+  },
+  {
+    "slug": "the-star-punch",
+    "name": "The Star Punch",
+    "epithet": "the earned uppercut",
+    "emergence": "electrical"
+  },
+  {
+    "slug": "the-hearts",
+    "name": "The Hearts",
+    "epithet": "the stamina · the count",
+    "emergence": "electrical"
+  },
+  {
+    "slug": "mr-dream",
+    "name": "Mr. Dream",
+    "epithet": "the ghost that replaced the champ · the true self",
+    "emergence": "spiritual"
+  },
+  {
+    "slug": "the-arcade-bloodline",
+    "name": "The Arcade Bloodline",
+    "epithet": "Punch-Out!! 1984 · the lineage",
+    "emergence": "spiritual"
+  }
+]

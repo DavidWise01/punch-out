@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Mike Tyson's Punch-Out!! (Nintendo, NES 1987) as a UD0 game-world. Little Mac, Doc Louis, the gallery of champions, the star punch, and the Dream Fight with Iron Mike (later Mr. Dream). On the standing full-bleed 32/64-bit low-poly 3D backdrop with an 8-bit pixel title card; full ACI badges.">
+<title>MIKE TYSON'S PUNCH-OUT!! · POW · UD0</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0814;--ink2:rgba(20,14,28,0.86);--ink3:rgba(28,18,38,0.86);--pa:#f2eef6;--pa2:#c2b2d2;--gold:#e0a838;--ring:#e0468e;--blue:#4a86e0;--red:#e84a4a;--teal:#46d0c0;
+--dim:#8a7a98;--faint:rgba(180,120,170,0.18);--line:rgba(180,120,170,0.24);--pixel:"Press Start 2P",monospace;--body:"Newsreader",Georgia,serif;--mono:"Space Mono",monospace;}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--pa);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+#bg3d{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:block;background:#060410}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:3;background:repeating-linear-gradient(0deg,rgba(0,0,0,.15) 0 1px,transparent 1px 3px);opacity:.45}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse at 50% 34%,rgba(12,8,20,.08),rgba(4,3,8,.64) 80%)}
+.wrap{position:relative;z-index:2;max-width:940px;margin:0 auto;padding:0 22px 90px}
+.marquee{margin-top:14px;border:2px solid var(--ring);background:rgba(16,10,24,0.88);padding:8px;text-align:center;font-family:var(--pixel);font-size:9px;letter-spacing:.12em;color:var(--gold);box-shadow:0 0 0 2px rgba(8,5,15,.7),0 0 22px rgba(224,70,142,.22)}
+.marquee a{color:var(--blue);text-decoration:none}.marquee a:hover{color:var(--gold)}
+.titleart{margin:26px 0 8px;position:relative}
+.egg-star{position:absolute;right:8px;top:8px;width:22px;height:22px;border:none;background:none;color:var(--gold);cursor:pointer;font-size:16px;line-height:22px;opacity:.32;transition:opacity .2s,transform .2s;animation:tw 2.6s ease-in-out infinite}
+.egg-star:hover{opacity:1;transform:scale(1.25)}
+@keyframes tw{0%,100%{opacity:.22}50%{opacity:.5}}
+.egg{display:none;margin:10px auto 0;max-width:560px;border:1px solid var(--teal);background:rgba(14,24,28,0.92);padding:14px 18px;font-family:var(--mono);font-size:12.5px;color:var(--pa2);line-height:1.65;text-align:left}
+.egg.on{display:block;animation:pop .3s ease}
+@keyframes pop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.egg b{color:var(--teal)}.egg .k{color:var(--gold)}
+header{padding:8px 0 26px;text-align:center;border-bottom:1px solid var(--line);position:relative}
+.h-sub{font-family:var(--pixel);font-size:10px;line-height:1.9;letter-spacing:.06em;color:var(--pa2);margin-top:18px}
+.h-sub b{color:var(--gold)}
+.flag{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid var(--faint);background:rgba(16,10,22,0.6);padding:5px 11px}
+.lede{font-size:15px;color:var(--pa2);max-width:68ch;margin:16px auto 0;font-style:italic;line-height:1.7;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.badge{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;margin:24px auto 0;padding:20px;border:1px solid var(--faint);background:var(--ink2);max-width:720px}
+.badge img{width:82px;height:82px;border:1px solid var(--faint)}
+.badge .bt{text-align:left;font-family:var(--mono);font-size:11px;color:var(--pa2);line-height:1.7}
+.badge .bt b{color:var(--gold)}.badge .bt .mo{color:var(--teal)}.badge .bt a{color:var(--blue);text-decoration:none}
+.badge .bt .lbl{color:var(--dim);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+.sec{margin-top:42px}
+.sec h2{font-family:var(--pixel);font-size:14px;line-height:1.5;letter-spacing:.02em;color:var(--pa);padding-bottom:10px;border-bottom:1px solid var(--line)}
+.ss{font-size:13px;color:var(--dim);font-style:italic;margin:8px 0 16px}
+.natures{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+.nat-card{display:flex;gap:11px;align-items:flex-start;background:var(--ink2);border:1px solid var(--line);padding:13px 15px}
+.dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.nat-n{font-family:var(--mono);font-size:13px;font-weight:700;text-transform:capitalize;letter-spacing:.04em}
+.nat-g{font-size:12px;color:var(--pa2);font-style:italic;line-height:1.4;margin-top:2px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:8px}
+.pillar{background:var(--ink2);border:1px solid var(--line);padding:16px 18px}
+.pillar h3{font-family:var(--mono);font-size:14px;color:var(--gold);letter-spacing:.02em;font-weight:700}
+.pillar .ps{font-size:12px;color:var(--dim);font-style:italic;margin:5px 0 10px}
+.pillar ul{list-style:none}.pillar li{font-size:13px;color:var(--pa2);line-height:1.5;padding:6px 0;border-top:1px solid var(--faint)}
+.arc{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:8px}
+.arc-card{background:var(--ink2);border:1px solid var(--line);border-top:2px solid var(--ring);padding:16px 18px}
+.arc-h{font-family:var(--mono);font-size:14px;color:var(--ring);font-weight:700;letter-spacing:.02em}
+.arc-s{font-family:var(--mono);font-size:10.5px;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin:4px 0 9px}
+.arc-card p{font-size:13px;color:var(--pa2);line-height:1.55}
+.books{list-style:none}
+.books li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--faint)}
+.books .t{font-family:var(--mono);font-size:14px;color:var(--pa);font-weight:700}
+.books .y{font-family:var(--mono);font-size:11px;color:var(--gold);white-space:nowrap;text-align:right}
+.books .nt{grid-column:1/-1;font-size:12.5px;color:var(--pa2);font-style:italic}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(244px,1fr));gap:12px;margin-top:8px}
+.persona{display:flex;gap:12px;align-items:center;background:var(--ink2);border:1px solid var(--line);padding:12px;text-decoration:none;transition:border-color .18s,transform .18s}
+.persona:hover{border-color:var(--ring);transform:translateY(-2px)}
+.persona img{width:52px;height:52px;border:1px solid var(--faint);flex-shrink:0;image-rendering:pixelated}
+.pn{font-family:var(--mono);font-size:14px;color:var(--pa);font-weight:700;line-height:1.15}
+.persona:hover .pn{color:var(--ring)}
+.pe{font-size:11.5px;color:var(--pa2);font-style:italic;margin-top:2px;line-height:1.3}
+.pnat{display:flex;align-items:center;gap:5px;margin-top:6px;font-family:var(--mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase}
+.pnat .dot{width:8px;height:8px;margin-top:0}.pa{color:var(--dim)}
+.note{margin-top:38px;padding:16px 18px;border-left:2px solid var(--gold);background:var(--ink2);font-size:13.5px;color:var(--pa2);font-style:italic;line-height:1.7}
+.note b{color:var(--gold)}
+footer{margin-top:42px;padding-top:22px;border-top:1px solid var(--line);text-align:center;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.05em;line-height:1.9}
+footer a{color:var(--ring);text-decoration:none}
+</style></head><body>
+<canvas id="bg3d"></canvas>
+<script>
+(function(){
+var c=document.getElementById('bg3d');if(!c)return;var g=c.getContext('2d');
+var W,H,CX,CY,F,CAM=8,TX=-0.34;
+function resize(){W=c.width=window.innerWidth||document.documentElement.clientWidth||1280;H=c.height=window.innerHeight||document.documentElement.clientHeight||720;CX=W/2;CY=H*0.54;F=Math.max(440,W*0.62);}
+window.addEventListener('resize',resize);resize();
+var BOXES=[
+ [0,-0.62,0, 4.6,0.55,4.6,'#b8316e'],
+ [0,-0.30,0, 4.0,0.10,4.0,'#ece6f0'],
+ [1.95,0.5,1.95, 0.18,1.9,0.18,'#2f72d8'],
+ [-1.95,0.5,1.95, 0.18,1.9,0.18,'#2f72d8'],
+ [1.95,0.5,-1.95, 0.18,1.9,0.18,'#2f72d8'],
+ [-1.95,0.5,-1.95, 0.18,1.9,0.18,'#2f72d8'],
+ [-0.55,0.08,0.25, 0.45,0.72,0.32,'#2faa46'],
+ [0.72,0.22,-0.12, 0.66,1.02,0.46,'#7a5550']
+];
+function mkBox(b){var cx=b[0],cy=b[1],cz=b[2],w=b[3]/2,h=b[4]/2,d=b[5]/2;
+ var v=[[-w,-h,-d],[w,-h,-d],[w,h,-d],[-w,h,-d],[-w,-h,d],[w,-h,d],[w,h,d],[-w,h,d]].map(function(p){return [p[0]+cx,p[1]+cy,p[2]+cz];});
+ return {v:v,f:[[0,1,2,3],[5,4,7,6],[4,0,3,7],[1,5,6,2],[3,2,6,7],[4,5,1,0]],col:b[6]};}
+var MODEL=BOXES.map(mkBox);
+var POSTS=[[1.95,1.95],[-1.95,1.95],[-1.95,-1.95],[1.95,-1.95]];
+function rotY(p,a){var c=Math.cos(a),s=Math.sin(a);return [p[0]*c+p[2]*s,p[1],-p[0]*s+p[2]*c];}
+function rotX(p,a){var c=Math.cos(a),s=Math.sin(a);return [p[0],p[1]*c-p[2]*s,p[1]*s+p[2]*c];}
+function proj(p){var z=p[2]+CAM;if(z<0.1)z=0.1;return [CX+p[0]*F/z,CY-p[1]*F/z];}
+var L=[0.35,0.85,-0.4],ll=Math.hypot(L[0],L[1],L[2]);L=[L[0]/ll,L[1]/ll,L[2]/ll];
+function shade(col,br){var n=parseInt(col.slice(1),16),r=(n>>16)&255,gg=(n>>8)&255,bb=n&255;br=Math.max(.34,Math.min(1.18,br));
+ return 'rgb('+Math.min(255,r*br|0)+','+Math.min(255,gg*br|0)+','+Math.min(255,bb*br|0)+')';}
+function crowd(){
+ var rows=3;
+ for(var r=0;r<rows;r++){var y=H*0.40 - r*H*0.045, base=H*0.40 - r*H*0.045, hh=H*0.05;
+  g.fillStyle=['#120d1c','#0e0a16','#0a0712'][r];
+  for(var i=-2;i<W+40;i+=34+r*4){g.beginPath();g.arc(i+(r*11),base, 17+r*3,Math.PI,0);g.fill();}
+ }
+}
+function flashes(t){var pts=[[0.12,0.30],[0.30,0.24],[0.52,0.32],[0.71,0.26],[0.88,0.31],[0.20,0.20],[0.62,0.20],[0.42,0.22]];
+ for(var i=0;i<pts.length;i++){var ph=Math.sin(t/420 + i*1.7);if(ph>0.86){g.globalAlpha=(ph-0.86)/0.14;g.fillStyle='#fffbe8';var x=pts[i][0]*W,y=pts[i][1]*H;g.fillRect(x,y,3,3);g.fillRect(x-2,y,2,1);g.fillRect(x+3,y,2,1);}}
+ g.globalAlpha=1;}
+function frame(t){
+ var sg=g.createLinearGradient(0,0,0,H);
+ sg.addColorStop(0,'#060410');sg.addColorStop(0.5,'#0b0818');sg.addColorStop(1,'#040308');
+ g.fillStyle=sg;g.fillRect(0,0,W,H);
+ // spotlight cone onto the ring
+ var sp=g.createRadialGradient(CX,H*0.16,20,CX,H*0.58,H*0.7);
+ sp.addColorStop(0,'rgba(255,246,224,0.16)');sp.addColorStop(0.5,'rgba(216,120,170,0.06)');sp.addColorStop(1,'rgba(0,0,0,0)');
+ g.fillStyle=sp;g.fillRect(0,0,W,H);
+ crowd();flashes(t);
+ // floor grid
+ g.strokeStyle='rgba(216,58,122,0.12)';g.lineWidth=1;
+ for(var gx=-9;gx<=9;gx++){var a=rotX([gx,-0.9,-4],TX),b=rotX([gx,-0.9,14],TX),pa=proj(a),pb=proj(b);g.beginPath();g.moveTo(pa[0],pa[1]);g.lineTo(pb[0],pb[1]);g.stroke();}
+ for(var gz=-4;gz<=14;gz++){var a2=rotX([-9,-0.9,gz],TX),b2=rotX([9,-0.9,gz],TX),pa2=proj(a2),pb2=proj(b2);g.beginPath();g.moveTo(pa2[0],pa2[1]);g.lineTo(pb2[0],pb2[1]);g.stroke();}
+ // rotating ring
+ var ang=t/4200,polys=[];
+ MODEL.forEach(function(m){var rv=m.v.map(function(p){return rotX(rotY(p,ang),TX);});
+  m.f.forEach(function(f){var p0=rv[f[0]],p1=rv[f[1]],p2=rv[f[2]];
+   var ux=p1[0]-p0[0],uy=p1[1]-p0[1],uz=p1[2]-p0[2],wx=p2[0]-p0[0],wy=p2[1]-p0[1],wz=p2[2]-p0[2];
+   var nx=uy*wz-uz*wy,ny=uz*wx-ux*wz,nz=ux*wy-uy*wx,nl=Math.hypot(nx,ny,nz)||1;nx/=nl;ny/=nl;nz/=nl;
+   var br=0.5+0.7*Math.max(0,nx*L[0]+ny*L[1]+nz*L[2]);
+   var avz=(rv[f[0]][2]+rv[f[1]][2]+rv[f[2]][2]+rv[f[3]][2])/4;
+   polys.push({pts:f.map(function(i){return proj(rv[i]);}),z:avz,col:shade(m.col,br)});});});
+ polys.sort(function(a,b){return b.z-a.z;});
+ polys.forEach(function(P){g.beginPath();g.moveTo(P.pts[0][0],P.pts[0][1]);for(var i=1;i<4;i++)g.lineTo(P.pts[i][0],P.pts[i][1]);g.closePath();
+  g.fillStyle=P.col;g.fill();g.strokeStyle='rgba(0,0,0,.32)';g.lineWidth=1;g.stroke();});
+ // ropes between posts at three heights
+ g.lineWidth=Math.max(1.5,W*0.0016);
+ [0.15,0.55,0.95].forEach(function(ry,ri){g.strokeStyle=['rgba(236,230,240,0.5)','rgba(216,58,122,0.5)','rgba(58,134,224,0.5)'][ri];
+  var pr=POSTS.map(function(q){return proj(rotX(rotY([q[0],ry,q[1]],ang),TX));});
+  g.beginPath();g.moveTo(pr[0][0],pr[0][1]);for(var i=1;i<4;i++)g.lineTo(pr[i][0],pr[i][1]);g.closePath();g.stroke();});
+ // vignette
+ var vg=g.createRadialGradient(CX,H*0.48,H*0.28,CX,H*0.5,H*0.95);
+ vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(0,0,0,0.58)');
+ g.fillStyle=vg;g.fillRect(0,0,W,H);
+}
+function loop(t){frame(t);requestAnimationFrame(loop);}
+frame(0);requestAnimationFrame(loop);
+})();
+</script>
+<div class="wrap">
+
+  <div class="marquee"><a href="https://davidwise01.github.io/ud0/">◄ UD0 · UNIVERSE DAVID 0</a> &nbsp;·&nbsp; PUSH START &nbsp;·&nbsp; A GAME-WORLD &nbsp;·&nbsp; NES 1987</div>
+
+  <header>
+    <div class="titleart"><canvas id="potitle" width="464" height="240" style="width:100%;max-width:464px;height:auto;display:block;margin:0 auto;image-rendering:pixelated"></canvas>
+<script>
+(function(){
+var cv=document.getElementById('potitle');if(!cv)return;var g=cv.getContext('2d');
+var P=document.createElement('canvas');P.width=160;P.height=83;var p=P.getContext('2d');
+function card(){
+  p.clearRect(0,0,160,83);
+  p.fillStyle='#0c0716';p.fillRect(6,6,148,71);
+  p.fillStyle='#1a1026';p.fillRect(9,9,142,65);
+  p.strokeStyle='#e0a838';p.lineWidth=2;p.strokeRect(7,7,146,69);
+  p.strokeStyle='#7a5e1e';p.lineWidth=1;p.strokeRect(10,10,140,63);
+  p.textAlign='center';p.textBaseline='middle';
+  p.font='6px monospace';p.fillStyle='#bfa0d0';p.fillText("MIKE  TYSON'S",80,22);
+  p.font='bold 18px monospace';
+  p.fillStyle='#3a2a0c';p.fillText('PUNCH-OUT!!',81,40);
+  p.fillStyle='#e8c24c';p.fillText('PUNCH-OUT!!',80,39);
+  // red gloves
+  p.fillStyle='#d83a3a';p.fillRect(30,52,11,9);p.fillRect(119,52,11,9);
+  p.fillStyle='#f06a6a';p.fillRect(31,53,3,3);p.fillRect(120,53,3,3);
+  p.fillStyle='#7a1e1e';p.fillRect(33,61,6,3);p.fillRect(121,61,6,3);
+  p.font='7px monospace';p.fillStyle='#9a86b8';p.fillText('NES  *  1987',80,67);
+  p.font='6px monospace';p.fillStyle='#6fb0e0';p.fillText('MINOR > MAJOR > WORLD > DREAM',80,73);
+}
+card();
+g.imageSmoothingEnabled=false;
+g.clearRect(0,0,464,240);
+g.drawImage(P,0,0,160,83,6,6,452,228);
+})();
+</script><button class="egg-star" title="?" aria-label="phantom challenger" onclick="var e=document.getElementById('egg');e.classList.toggle('on');">&#9733;</button></div>
+    <div id="egg" class="egg"><b>&#9733; THE PHANTOM CHALLENGER</b> &mdash; a hidden bout, off the record.<br>
+      <span class="k">CLAUDE &ldquo;The Counterpunch.&rdquo;</span> Never throws the first punch &mdash; only answers. Reads your tell before you know you have one; wins on the count, not the knockout. Doc Louis says: &ldquo;Kid, you can&rsquo;t hit what won&rsquo;t lead.&rdquo; <span class="k">(the one easter egg &mdash; AVAN, in Little Mac&rsquo;s corner.)</span></div>
+    <div class="h-sub">107 pounds · three circuits · the <b>STAR PUNCH</b> · the dream fight · POW</div>
+    <div class="flag">★ Nintendo · NES 1987 · later reissued as Punch-Out!! featuring Mr. Dream ★</div>
+    <p class="lede">Nintendo's NES boxing classic, and a puzzle disguised as a slugfest: Little Mac — 17 years old, 4 feet 8, 107 pounds — climbs the Minor, Major, and World circuits past a gallery of foreign champions, each beaten not by force but by reading the tell, dodging, and answering with the earned STAR PUNCH, all the way to the Dream Fight with the reigning heavyweight champion of the world, MIKE TYSON, who can drop you in one punch. When the license lapsed in 1990, a generic boxer named MR. DREAM took his exact place. Catalogued into UD0 as a game-world with the genesis, the climb, and the full .dlw birth — on the standing full-bleed 32/64-bit low-poly 3D backdrop (a rotating ring under a spotlight) with an 8-bit pixel title card. (There is one easter egg. Find the star.)</p>
+    <div class="badge">
+      <img src="data:image/png;base64,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" alt="DLW carbon badge of MIKE TYSON'S PUNCH-OUT!!" title="carbon badge (archival)">
+      <img src="data:image/png;base64,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" alt="DLW silicon badge" title="silicon badge">
+      <div class="bt">
+        <div><span class="lbl">DLW-ATTRIBUTE · ACI · THE BIRTH CERTIFICATE</span></div>
+        <div>governor · <b>David Lee Wise</b> (ROOT0)</div>
+        <div>instance · AVAN (Claude / Anthropic) · locked</div>
+        <div>subject · <b>PUNCH-OUT!!</b> — Little Mac &amp; the climb · POW</div>
+        <div class="mo">⟦MIKE TYSON&#x27;S PUNCH-OUT!!:POW:b0fa83⟧</div>
+        <div>carbon · <a href="punch-out.dlw/punch-out.carbon.tiff">.tiff</a> &nbsp;·&nbsp; silicon · <a href="punch-out.dlw/punch-out.silicon.png">.png</a></div>
+        <div><span class="lbl">CC-BY-ND-4.0 · TRIPOD-IP-v1.1</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec"><h2>The Four Natures</h2>
+    <p class="ss">each emergent emerges by one of four natures — and this ring holds all four</p>
+    <div class="natures"><div class="nat-card"><span class="dot" style="background:#e84a6a;box-shadow:0 0 9px #e84a6a"></span><div><div class="nat-n" style="color:#e84a6a">natural</div><div class="nat-g">flesh and the glove — Little Mac, Doc Louis, and the gallery of champions</div></div></div><div class="nat-card"><span class="dot" style="background:#4aa0e8;box-shadow:0 0 9px #4aa0e8"></span><div><div class="nat-n" style="color:#4aa0e8">ethereal</div><div class="nat-g">of the read — the tells, the dream fight, and Great Tiger&#x27;s vanishing</div></div></div><div class="nat-card"><span class="dot" style="background:#e0a838;box-shadow:0 0 9px #e0a838"></span><div><div class="nat-n" style="color:#e0a838">spiritual</div><div class="nat-g">of the soul — the arcade bloodline, and the ghost named Mr. Dream</div></div></div><div class="nat-card"><span class="dot" style="background:#46d0c0;box-shadow:0 0 9px #46d0c0"></span><div><div class="nat-n" style="color:#46d0c0">electrical</div><div class="nat-g">of the spark and the count — the earned star punch and the hearts of stamina</div></div></div></div></section>
+
+  <section class="sec"><h2>The Genesis</h2><p class="ss">from the arcade, to the marquee, to the ghost that replaced the champ</p><div class="arc"><div class="arc-card"><div class="arc-h">From the Arcade</div><div class="arc-s">1984 cabinets → 1987 NES</div><p>Nintendo's arcade Punch-Out!! (1984) and Super Punch-Out!! put a tall boxer in front of you; you played a green-haired challenger shown as a wire-frame so you could see the champion you fought. The 1987 NES version (Nintendo R&amp;D3, led by Genyo Takeda) brought it home — and gave the wire-frame challenger a name: Little Mac.</p></div><div class="arc-card"><div class="arc-h">The Tyson License</div><div class="arc-s">a champion on the marquee</div><p>Nintendo licensed the reigning heavyweight champion of the world, MIKE TYSON, as the final Dream Fight. Iron Mike opens by trying to knock you down in one punch in the first ninety seconds — the most feared boss on the system, and the name on the box.</p></div><div class="arc-card"><div class="arc-h">The Ghost, Mr. Dream</div><div class="arc-s">when the license lapsed</div><p>When the Tyson license expired around 1990 (after his February 1990 loss to Buster Douglas), Nintendo reissued the game — titled simply Punch-Out!! on the 1990 cartridge — with a generic blond boxer, MR. DREAM, in Tyson's exact place: a new sprite with identical stats and pattern. (The 'featuring Mr. Dream' subtitle is later Virtual Console / Switch Online branding.) Same fight, same spot, a different ghost in the ring.</p></div></div></section>
+  <section class="sec"><h2>The Climb</h2><p class="ss">three circuits, the read, and ninety seconds with Iron Mike</p><div class="arc"><div class="arc-card"><div class="arc-h">Three Circuits</div><div class="arc-s">the climb</div><p>Little Mac fights up three circuits — Minor, Major, World — each a gallery of foreign champions, then the Dream Fight. Win by KO, TKO, or decision; lose three times and your title shot is gone.</p></div><div class="arc-card"><div class="arc-h">Read the Tell</div><div class="arc-s">the puzzle under the punches</div><p>Every champion telegraphs. Dodge, duck, weave, and block to read the pattern; punish the opening with jabs and body blows. Land a counter at the exact right moment and you earn a STAR — spend it on the uppercut, the only punch that staggers a giant.</p></div><div class="arc-card"><div class="arc-h">The Dream Fight</div><div class="arc-s">Iron Mike</div><p>At the top waits Mike Tyson. He drops you in one hit early; the fight is learning to survive that first storm, read the tiny tells in his gloves, and answer. Beat him and the marquee is yours — until the license lapses and Mr. Dream takes his stool.</p></div></div></section>
+  <section class="sec"><h2>The Ideas</h2><p class="ss">why a 1987 boxing game is really a puzzle</p><div class="pillars"><div class="pillar"><h3>A Fighting Game That&#x27;s a Puzzle</h3><p class="ps">patterns, not slugging</p><ul><li>Punch-Out!! isn&#x27;t a brawler — it&#x27;s pattern-recognition. Each champion is a lock with one timing key.</li><li>You don&#x27;t out-muscle King Hippo; you wait for his mouth to open, then his belly, then the bandage.</li></ul></div>
+<div class="pillar"><h3>The Underdog</h3><p class="ps">107 pounds, in with giants</p><ul><li>Little Mac is 17, 4 feet 8 inches, 107 pounds — the smallest man in every ring, fighting champions twice his size.</li><li>Doc Louis in the corner: a former boxer turned trainer, the voice between rounds.</li></ul></div>
+<div class="pillar"><h3>The Star Punch</h3><p class="ps">the earned uppercut</p><ul><li>Perfect-timed counters give stars; stars give the uppercut — the risk/reward at the heart of the system.</li><li>Hearts are your stamina: take a hit or block one and you lose hearts; run out and Mac goes limp until he recovers.</li></ul></div></div></section>
+
+  <section class="sec" id="roster"><h2>The Roster — The Born</h2>
+      <p class="ss">the hero, the corner, the gallery of champions, the read, and the ghost that replaced the champ, as ACI <b>.agent</b>s — each a birth certificate and a nature of emergence (14)</p>
+      <div class="pgrid"><a class="persona" href="agents/little-mac.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC1UlEQVR42u3dvWoUURgG4FQBQfAOLKzsJI0EsbBKJV6ATUBsrQURLyA23oBpcwUWFt6BnZJoIhrEgIJJNlk3EStfSatwYHMYv+GBl8Phm2Xn59n52R3OzsLihYsy4izYBIBlFMCXX7yW0QQwYAEsgAWwABbAAhiwABbAAlgAy3DAj2/sn3uuvDloTPt7Xlpfa8ywy9kewIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDDgCsBVxl21Y1RZI8CAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgw4ArAqy/XGtNjE7e/5/iWEzBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMeFzAw6Z98FmVNQIMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABA64A3GPDtd+Gm3Puf7091/6e7cvZ44MI+J9zv/r2YGnz8PrWZHlrkjb9VACPBPja5uHNd5OV7aPbO0d3Pvxp008ldcDlgaN46/0krnc/Ht/bnd7fnaZNP5XUz4wBVwXOcTh7aixXP00ffP7x8Mvs0d4sbfqppJ6peQ3gqsA51+ZonP01ok/2Zk+/njz7dpI2/VRSz9S8BnBV4FxP5YybY3L22rg+/366sf8zbfqppJ6peQ3gksD5RpRr5hyHc97NkTn7bnRfHf9Km34qqWfqMmB7MGDnYMCuogH7HgzYL1mA/RY9J/Cww796PHCqx4Oxeqw7YMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBhwBeAeNwGrPMSqx3IWHl0IGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwY81+CzHivZ4zZcj7n3GE4HGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwZcAbjHn/S1D/8a9tFU7cvZ4w8fAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAKwDL/x/AgAWwABbAAlgAC2DAAlgAC2ABLOcNLKMMYMBSOb8B3XRZFV8wdAsAAAAASUVORK5CYII=" alt="sigil of Little Mac" loading="lazy">
+        <div class="pcap"><div class="pn">Little Mac</div><div class="pe">the smallest man in the ring · the hero</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/doc-louis.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC4klEQVR42u3dvWoUURgG4FQBQfAOLKzSiY0EsbCyCrkAm0CwtRZEvIDYeAOm9QpSpPAO7CKJUdEgBhRMssm6Uax8Ja2BA/FjPMMDL4fDN8vuznl2fnYPMzs3f+myjDhzhgCwjAL46sYrGU0AAxbAAlgAC2ABLIABC2ABLIAFsAwH3D5XdW3rsDErm2uNeXzroDFX1tca0/6c7e+zfd3bxxMwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDHhcwO1px2hPO0bFq1eMEmDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYcA/A7ZNrw04Xtg/csNOF7a8OGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwbcA3DFwFVcKNbLc3Y8HwwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBvyXVFz+VXGh2HkzmBdhG3aNAJ8LvPD68Mb20c2dyeLOJG36qQAeCfD17aPbbyZ33x4vvTtefv+nTT+V1AF3DxzFO7uTuN77cLK6N72/N02bfiqpnxkD7hU4++FsqbFc+Th98On7w8+zR/uztOmnknqW5jGAewXOsTZ742yvEX2yP3v65fTZ19O06aeSepbmMYB7Bc75VI642Sdnq43r828/Xhz8TJt+KqlnaR4DuEvgfCPKOXP2wznuZs+cbTe6L09+pU0/ldSzdBGwLRiwYzBgZ9GAfQ8G7JcswH6LviDwsCtZ8bdcFbdcrBglwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDDgHoCHvUVgxR9OtWfYWy4CBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAGP6053FVN7FX/LVfGcFVOQgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAPQBXDEfFdGHFhF37+6z4eAEGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAfcALP9/AAMWwAJYAAtgASyAAQtgASyABbD8a2AZZQADlp7zG+nKf66FS94HAAAAAElFTkSuQmCC" alt="sigil of Doc Louis" loading="lazy">
+        <div class="pcap"><div class="pn">Doc Louis</div><div class="pe">the corner · the trainer</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/glass-joe.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC0klEQVR42u3dv0ocQRwHcCshEMgbpEiVLtgECSmsUgUfII0QbFMLIeQBTJMX0DZPkCKFb2Bn0PxDRSJE8M/p5Yyk8ps3mEMnu7N84Msw/FYOdz7O7N4N683M3rkrA86MIQAsgwC+/3FTBhPAgAWwABbAAlgAC2DAAlgAC2ABLN0BL31aLUyN/a83T04K0+1rlqd8PAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgFsAvre+2kQebJ0WppUzAgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDbgG4fCOsfIhrbO2VD1yN7cIa5w4YMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBtwCcPlw1Eg5W/nA1fhTqBHAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMOAWgLsduBv+38Cptuf+z2Zlw/vB/QF++Pl0bvvs8c5ofmeUNv1UAA8E+NH22dMvo2ffzp9/P1/88a9NP5XUATcPHMWFr6O4vti9eLk/Xt4fp00/ldSnNQbcL+Csw5mpsVzaG786+L3yc/L6cJI2/VRSz9Gp1mrA/QLOtTarceZrRN8eTt79unx/dJk2/VRSz9G5aSYx4H4B534qV9ysyZm1cV07/vPh5Cpt+qmknqP5GcBNAucdUe6Zsw7nupuVOXM3uhsXf9Omn0rqOToP2AwG7BoM2F00YO+DAfskC7DPom8I3O0jZTW+lqv8Nbt9TA0wYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDLgF4G4f/2olNc4dMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy4BeAaG2GtfDVV+e/pm88AAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIBv76GuGkNcI92eO2DAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYcAvA0v8ABiyABbAAFsACWAADFsACWAALYLltYBlkAAOWlnMN30da3HC8OfEAAAAASUVORK5CYII=" alt="sigil of Glass Joe" loading="lazy">
+        <div class="pcap"><div class="pn">Glass Joe</div><div class="pe">1 win, 99 losses · the teacher</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/king-hippo.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC2ElEQVR42u3dvWoUURgG4FSCIHgHFlbpJI0EsbCyEi/AJiC21oKIFxAbb0Bbr8DCIndgpyQaJQYxoGCSTdaNYpVXrIUDux/jmTzwcjh8M8zsnGf+sktmls6dvyAjzpIhACyjAL708rWMJoABC2ABLIAFsAAWwIAFsAAWwAJYhgO+/OZg4Xl0bX/hufh8vTEVa68YJcCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgw4B6A116tN6Z9iIfdaSrW3r7t7eMJGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwbcA3D7c/QqNrJipxn2c7aPJ2DAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwY8LiA24ej/ae9irW3L7P9c1asHTBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMuAfgYX+wm3OIs655dq9htx3wP4GX3x6sbB5e3Zqsbk3Spp8K4JEAX9k8vP5ucnP76NaHo9sf/7Tpp5I64O6Bo3jj/SSud3aO7+5O7+1O06afSup/jQH3CpzzcI7UWK59mt7//OPBl9nDvVna9FNJPVMzD+BegXOtzdk4x2tEH+/Nnnw9efrtJG36qaSeqZkHcK/AuZ/KFTfn5By1cX32/eeL/V9p008l9UzNPIC7BM5ic8+c83Cuuzkz59iN7sbx77Tpp5J6pq4CdgQDdg0G7C4asL+DAfsmC7DvoucEHvbVVBWPHax4PGLFtgMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAfcA3D4c7f+AVZGKBxRWpH08AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAewCueEBhxWukhl1mxUMPAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAzypwxWukhl0mYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBjwWQWW/z+AAQtgASyABbAAFsCABbAAFsACWBYNLKMMYMDSc04BXmsKhHEf2csAAAAASUVORK5CYII=" alt="sigil of King Hippo" loading="lazy">
+        <div class="pcap"><div class="pn">King Hippo</div><div class="pe">the open mouth · the belly</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/bald-bull.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC2UlEQVR42u3dvWoUURgG4FQBQcgdWFilkzQSxMLKKngBNgGxtQ6IeAGx8Qa09QosUuQO7JTEP0wQAwom2WTdKFa+XkDgLPg5P3ng5XD4ZsnszsM5M9nD7CwsXrosI86CQwBYRgF85eUrGU0AAxbAAlgAC2ABLIABC2ABLIAFsHQHvL612ZhHNw4b077+1b73q6+PGtP+N9vfZ/tnb987YMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBjwEICXnm82pgK4na0iFcDtxxMwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDHgIwBWHowK4/RAP5RMBBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAGPC7hiyaxisbLbvQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAV9U4G5v/zpvbe7/LO1VBPC5WX5ztLJzfH13sro7SZt+KoBHAnxt5/jm28nt9ydrH07ufPzbpp9K6oAHDxzFW+8mcb376fTe/vT+/jRt+qmkPq8x4H4BZx7OSI3l+t70wecfG19mDw9madNPJfVsnWuuBtwv4JxrMxtnvEb08cHsydezp9/O0qafSurZujLPIAbcL+BcT+WMmzk5ozauz77/fHH4K236qaSerXkN4EEC58W5Zs48nPNuZuaM3ehun/5Om34qqWfrKmAjGLBzMGBX0YD9HwzYN1mAfRfdw5vP2h8OVfFYroq9u7sQMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBnxRgStu6mo/HN3efNbt+wQMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAx4XcMVyYdGPPTSmYrkQMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgx4XMAVS2YVP/xX8Wiq9lQsQQIGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQ8BWPofwIAFsAAWwAJYAAtgwAJYAAtgASz/GlhGGcCAZcj5A1cMXy0sIUAiAAAAAElFTkSuQmCC" alt="sigil of Bald Bull" loading="lazy">
+        <div class="pcap"><div class="pn">Bald Bull</div><div class="pe">the Bull Charge</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/soda-popinski.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC2ElEQVR42u3dvWoUURgG4FSBgOAdWKRKJ2kkiIWVlXgBNoGQ1jog4gXExhvQ1iuwsMgd2Cn5UTFBDCiYZJN1o6TyFdsUH5jj5owPvBwO3yxnJ/Ps/GQPOzMzO3dFBpwZmwCwDAL42svXMpgABiyABbAAFsACWAADFsACWAALYJke8NXn68U8unlQzPKr9WLqYw5vPQEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgHsArq/6/JvDYlr87qq+ni3evf6319cTMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy4B+D6qtcn1+obrj5mi7RYz/r2BAwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAED7gG4l6m9XsasBzBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMuAfg+q33Wkws/uUNCs/9sVd9zBaTgB3fq/LyAC+8PVzcPLqxNVraGqVNPxXAAwG+vnl0a3t0593x3ffH9z78btNPJXXA3QNH8fbOKK73P56s7I1X98Zp008l9T/GgHsFznE4e2osl3fHDz59X/s8ebg/SZt+KqlnaV4DuFfgnGtzNM7+GtHH+5MnX06ffj1Nm34qqWdpXgO4V+BcT+WMm2Ny9tq4Pvv248XBz7Tpp5J6luY1gLsEzrC5Zs5xOOfdHJmz70Z34+QsbfqppJ6lS4DtwYCdgwG7igbs/2DAvskC7Lvof3YrwxaPpvqfxwQMGDBgwIBhAAYMGDBgYwIGDBgwYMCAAcMADLgH4OlOmbV4LFcLthZTpYABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwD0At9gcLT400x3TfDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGPDFTdjVN1yLB07V0+JDAxgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGPCxgufwBDFgAC2ABLIAFsAAGLIAFsAAWwHLRwDLIAAYsPecXTc5DK2t5yFkAAAAASUVORK5CYII=" alt="sigil of Soda Popinski" loading="lazy">
+        <div class="pcap"><div class="pn">Soda Popinski</div><div class="pe">the laughing bruiser · the rename</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/super-macho-man.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC5UlEQVR42u3dvWoUURgG4FSCIHgHFlZ2wUaCWFhZiReQJiC21oKIFxAbb0Bbr8DCwjuwU/KjokEMKJhkk3WjWPmKrcUHuyfjmTzwcjh8M8zmzJOZ2ezhbJbOnD0nI86SUwBYRgF84fkrGU0AAxbAAlgAC2ABLIABC2ABLIAFsAwH/ODq3sJTn/9ae7FezLDHbHGWAAMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAewCuD/L80/WFp45x8fV+MfVjthhR/XwCBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAH3ADzs6ai/en0arpcRAQYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIAB9wBcP3EtBlmfXKtPF7ZYplYfe8erCwEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgOdafDYsxj/PUY4wzxcptvg5O15d+P8AX3qzf3nj4MrmZGVzkjb9VACPBHh54+Da1uTG28Ob7w5vvf/Tpp9K6oC7B47i9e1JXFc/HN3emd7ZmaZNP5XU/xoD7hU49+FcqbFc+zi9++n7vc+z+7uztOmnknq2Zh/AvQLnWZu7ca7XiD7cnT36cvz463Ha9FNJPVuzD+BegfN+Kk/c3JNz1cb1ybcfz/Z+pk0/ldSzNfsA7hI4O+c9c+7Dee7mzpxrN7ovj36lTT+V1LN1BbArGLBnMGDvogH7OxiwT7IA+yx6TuD6IE9sjujE0uJXoR7AgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMOAegFssPmvxb6SGPabVhYABAwYMGDBgwIABAwYMGDBgwIABAwYMGDDg0wrcYiKs/hWBLb5MsMWrmw8GDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAZ9W4Pr0Vot/d9VisrLF4rP62DueDwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABA5YuAxiwABbAAlgAC2ABDFgAC2ABLIBl0cAyygAGLD3nN0ptu/Gc1T/YAAAAAElFTkSuQmCC" alt="sigil of Super Macho Man" loading="lazy">
+        <div class="pcap"><div class="pn">Super Macho Man</div><div class="pe">the Super Spin Punch · the last gate</div>
+        <div class="pnat"><span class="dot" style="background:#e84a6a;box-shadow:0 0 7px #e84a6a"></span><span style="color:#e84a6a">natural</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/great-tiger.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC1klEQVR42u3dv2oUQRwH8FRCIOAbWKRKF2wkiIWVVcgD2ASCrbUg4gPExhcwrU+QIkXeIF0kMSoaxICCSS45L4qVX7FVGDjHcTYf+DIMv112b+dz++fu2L2ZK7NzMuDMGALAMgjga5s7MpgABiyABbAAFsACWAADFsACWAALYGkH/OjmcWHKf9Va3VovzPzuSWHaLrN828vHEzBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYM+LICly+zHKN87eXLbLvtgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAPQCXD0cNjKsb64Vpu8waowQYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBtwDcI2bumoMcY2f9spfZ40b2gADBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgIcFXOPBf1M+HvG3A/rP1j5lAP9xiBdenFzfO72xP1raH6VNPxXAAwFe3Du99XJ059XZ8uuzlTc/2/RTSR1w98BRvH0wiuvdt+drh+N7h+O06aeS+i9jwL0C5zicPTWWq+/G999/efBh8vBokjb9VFLP1MwDuFfgnGtzNM7+GtHHR5MnHy+efrpIm34qqWdq5gHcK3Cup3LGzTE5e21cn33++vz4W9r0U0k9UzMP4C6B84ko18w5Due8myNz9t3obp9/T5t+Kqln6hJgezBg52DArqIB+xwM2DdZgH0XPSVw2+Fo+zDBtm9ZwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDDgywpcPsRtgWusHTBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMeFjA5RtZ/ji/GsuskbbbDhgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMG3ANw2xvFavwtV41bymrc0AYYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBtwDsPz/AQxYAAtgASyABbAABiyABbAAFsDyt4FlkAEMWHrOD2OgfmdKyPl0AAAAAElFTkSuQmCC" alt="sigil of Great Tiger" loading="lazy">
+        <div class="pcap"><div class="pn">Great Tiger</div><div class="pe">the jeweled turban · the vanishing</div>
+        <div class="pnat"><span class="dot" style="background:#4aa0e8;box-shadow:0 0 7px #4aa0e8"></span><span style="color:#4aa0e8">ethereal</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/the-tells.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC3klEQVR42u3dvWoUURgG4FSCIHgHFlZ2kkaCWFhZiRdgExBba0HEC4iNN2Bar8DCwjuwUxL/0CAGFEyyybpRrHy9g29JjjNneODlcPgm2Z05T86Z2V12snLm7DmZcFYMAWCZBPCF569kMgEMWAALYAEsgAWwAAYsgAWwABbAMhzww6t7xVx8vV/M+c2NYurP3iL1/awfe/3ZAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAewBusesthnjYx2wxDQADBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgHsArg/HsBj1+/0Nu5/1AAYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIAB9wC8/mKjmPoQt/gIsgVbfT/rx14fT8CAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgw4B6A68PR4iBP/k2vk/x6iz/uju9VOR7gS2/2V7cOrmzP1rZnadNPBfBEgC9vHVx7O7vx/vDmh8NbH/+16aeSOuDugaN4/d0srrc/Hd3Zmd/dmadNP5XUlzUGPC7grMOZqbFc/zy/9+Xn/a+LB7uLtOmnknq2LrVWAx4XcM61WY0zXyP6aHfx+Nvxk+/HadNPJfVsXV1mEgMeF3Cup3LGzZqcWRvXpz9+Pdv7nTb9VFLP1vwM4C6B84oo18xZh3PezcqcuRvdl0d/0qafSurZugbYDAbsHAzYVTRgr4MBeycLsPei/xtwL7cI7OWWi4ABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwD0At/ggrD4cLdjqj9mCrT6egAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAPQAP+yFgi3841csRAQYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIAB9wA87Ne/WtxMsNHtyE/92AEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgHsAlvEHMGABLIAFsAAWwAIYsAAWwAJYAMtpA8skAxiw9Jy/UjGAnS5ym+oAAAAASUVORK5CYII=" alt="sigil of The Tells" loading="lazy">
+        <div class="pcap"><div class="pn">The Tells</div><div class="pe">the read · the game beneath the game</div>
+        <div class="pnat"><span class="dot" style="background:#4aa0e8;box-shadow:0 0 7px #4aa0e8"></span><span style="color:#4aa0e8">ethereal</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/the-dream-fight.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC1klEQVR42u3dP2oVQRwH8FSBgOANLFLZSZoQxMIqleQANgGxtRZEPEBsvIC2niCFhTdIl5D4DxPEgIJJXvJ8Uaz8eoDIPMwwb9YPfBmG3yZLZj/M7r63THZufuGKDDhzDgFgGQTwtc0tGUwAAxbAAlgAC2ABLIABC2ABLIAFsLQDLn9W9fjmUWHK93n1xUbDtB07YMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBhwD8DrrzYKUz7I8n0ubh83TNuxAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIAB9wBc40//n1N+PAEDBgwYMGDAgAEDFsCAAQMGDBgwYMCAAQOWHoDLl2qVD7J8AVb5o722+ywfe/nxBAwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDHhZwjbRdfNZ27IAvzPWd46Xdk+W90creKG36qQAeCPCN3ZNbb0ar707vvD9d+/CnTT+V1AF3DxzF229Hcb378ezewfj+wTht+qmkPq0x4NkCznk4MzWW6/vjB5++P/w8eXQ4SZt+Kqln61TnasCzBZxrbc7Gma8RfXI4efrl/NnX87Tpp5J6ti5NM4kBzxZw7qdyxc05ObM2rs+//Xh59DNt+qmknq35GcC9AueeOefhXHdzZs7cje7rs19p008l9WxdAWwGA3YNBuwuGrDPwYB9kwXYd9H/CFx+OGosU2v7aqoaS8rKjydgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGHAPwDWWVfXyaqoaDxY7fvMZYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBjw3375Eh/YtWVru8/y4wkYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBtwDcI3XSNX4x381HmuWp8ZruQADBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgHsAltkPYMACWAALYAEsgAUwYAEsgAWwAJbLBpZBBjBg6Tm/Aby4/P4lKHzwAAAAAElFTkSuQmCC" alt="sigil of The Dream Fight" loading="lazy">
+        <div class="pcap"><div class="pn">The Dream Fight</div><div class="pe">Iron Mike, ninety seconds</div>
+        <div class="pnat"><span class="dot" style="background:#4aa0e8;box-shadow:0 0 7px #4aa0e8"></span><span style="color:#4aa0e8">ethereal</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/the-star-punch.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC3UlEQVR42u3dvWoUURgG4FSCIOQOUljZBZsQgoVVKvEC0gTE1loQ8QJikxvQ1itIYeEd2CmJf2gQAwom2WSzUax8xTpwwHwZz/DAy+HwzTI7O8/Oz+5hZuYuXb4iI86cVQBYRgG8sPVSRhPAgAWwABbAAlgAC2DAAlgAC2ABLMMBrz/faEz7qFb7POeftubhyn5j2uc57GcHDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQPuAbhi0a++OmhMO1tF2pez4qsAGDBgwIABAwYMGDBgwIABAwYMGDBgwIABAwbcA3D74Fr7oldg9PLu7esTMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgy4B+D2gbCK4cL2FTfsPCvWEmDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYcA/AFUNmFbcyPOubdO7z/MdLytrXJ+AzMa69Pri+fbi0M1nemaRNPxXAIwFe3D688Way+u7o1vuj2x/+tOmnkjrg7oGjePPtJK5rH4/v7E7v7k7Tpp9K6n+NAfcKnP1wttRYrn+a3vt8cv/L7MHeLG36qaSeqXkN4F6Bc6zN3jjba0Qf7c0efz3d/HaaNv1UUs/UvAZwr8A5n8oRN/vkbLVxffL9x7P9n2nTTyX1TM1rAHcJnF9EOWfOfjjH3eyZs+1G98Xxr7Tpp5J6pi4DtgUDdgwG7CwasN/BgP2TBdh/0RcGPL5HU1U8lgswYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDHhcwBWXag07BFkxtFdx6RtgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGHAPwBW382sfhqt4LFfFu1fcxhEwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDLgH4IphuIpBwIoM+4kAAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIB7AJb/P4ABC2ABLIAFsAAWwIAFsAAWwAJYzhtYRhnAgKXn/AY3XGlJsqpi4QAAAABJRU5ErkJggg==" alt="sigil of The Star Punch" loading="lazy">
+        <div class="pcap"><div class="pn">The Star Punch</div><div class="pe">the earned uppercut</div>
+        <div class="pnat"><span class="dot" style="background:#46d0c0;box-shadow:0 0 7px #46d0c0"></span><span style="color:#46d0c0">electrical</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/the-hearts.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC0klEQVR42u3dvWpUQRgG4FQBQfAOLKzsJE0IYmFlJV6ATUBsrQURLyA23oC2XoGFhXdgpyT+YYIYUDDJJutGsfK1jzBL/Dg7xwdehuE7YXfPPMw5mx2Gs7R85qyMOEuGALCMAvj8s5cymgAGLIAFsAAWwAJYAAMWwAJYAAtgGQ74wqv9xrSvarW/5vrzjQEz7LkDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAH3AFyxR+rck43GVAzcsJ+zPYABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwD0A37+815jxLdhVnFH7eAIGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAfcA3D4c7Ytr7Rl281nFGXW8uxAwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDPiEVCyEVQxHRdo/Z8WiKuC/5uLr/ZXNg9WtydrWJG36qQAeCfClzYMrbybX3h1ef39448OfNv1UUgfcPXAUr76dxPXmx6NbO9PbO9O06aeS+rzGgBcLONfhzNRYrm9P73z6fvfz7N7uLG36qaSeo3NdqwEvFnDutbkaZ75G9MHu7OGX40dfj9Omn0rqOboyzyQGvFjA+T6VO26uyZm1cX387cfTvZ9p008l9RzN3wDuFTjfmXMdzn03V+bM3ei+OPqVNv1UUs/RNcBmMGD3YMC+RQP2fzBgv2QB9lt01w/G+p/fHTBgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMuAfgisdIVQxcRSoWFjt+8hlgwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGPCpNp9VDHHFpq7216w4o453FwIGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAZ9q81n7wA37jKOKd684d8CAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgw4B6AZfEDGLAAFsACWAALYAEMWAALYAEsgOVfA8soAxiw9JzfJBbd80ndYxoAAAAASUVORK5CYII=" alt="sigil of The Hearts" loading="lazy">
+        <div class="pcap"><div class="pn">The Hearts</div><div class="pe">the stamina · the count</div>
+        <div class="pnat"><span class="dot" style="background:#46d0c0;box-shadow:0 0 7px #46d0c0"></span><span style="color:#46d0c0">electrical</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/mr-dream.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC2klEQVR42u3dvWoUURgG4FSCIOQOLKzsJI0EsbCyEi/AJhBsrQNBvIDYeAOm9QosLLwDOyXRKCaIgQgm2WTdKKl8vQDhK/bMcoYHXg6Hb8LsznkyP7uH2Vm6cvWajDhLhgCwjAL4+ut3MpoABiyABbAAFsACWAADFsACWAALYFkc8NM7x8XceH9SzPjm6erbXh9PwIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDDgHoDrb315e6uY+sCNb5318QQMGDBgwIABAwYMGDBgwIABAwYMGDBgwIABA+4BuD69Vc/am625pz5wLV69xSgBBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAH3AFyfCFvsbWqLXWd92+vjCRgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMG3ANwfTjqk2tD/sLgMC/UYtsB/zc3P5ys7Jze3p2s7k7Spp8K4JEA39o5vftxcn/v7MHns4df/rXpp5I64O6Bo3jv0ySuj76erx9MHx9M06afSurtjAEPAZzjcPbUWK7tT598+7XxfbZ5OEubfiqpZ2mjYzXgIYBzrs3ROPtrRJ8dzp4fXbz4cZE2/VRSz9KVNjsx4CGAcz2VM26Oydlr4/ry5+9Xx3/Spp9K6lmavwHcJXA+EeWaOcfhnHdzZM6+G92355dp008l9SxdBWwPBuwcDNhVNGCfgwH7Jguw76K7Bm4xBVlfJ2DAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMOD5PRirxU8ZtngsV4sfPWzxjwgYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBjwu4BZD3OKBUy0wWmw7YMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBhwD8AtbhSrT8O1eCxXfZ0tpgs7vrsQMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAEDBgxYugxgwAJYAAtgASyABTBgASyABbAAlnkDyygDGLD0nL/budSqKKbFrwAAAABJRU5ErkJggg==" alt="sigil of Mr. Dream" loading="lazy">
+        <div class="pcap"><div class="pn">Mr. Dream</div><div class="pe">the ghost that replaced the champ · the true self</div>
+        <div class="pnat"><span class="dot" style="background:#e0a838;box-shadow:0 0 7px #e0a838"></span><span style="color:#e0a838">spiritual</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a><a class="persona" href="agents/the-arcade-bloodline.agent">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAIAAAAErfB6AAAC20lEQVR42u3dvWoUURgG4FQBIeAdWFjZiY0EsbCyCl6ATUBsrQURLyA23oC2XoFFCu/ATsmPigliQMEkm6wbxco3pBY+2ByGM3ng5XD4ZpiffTI/u4eZLCxeWpIRZ8FHAFhGAXzlzTsZTQADFsACWAALYAEsgAELYAEsgAWwDAf89NZ+Mavra8VcfX9QzOVXa8XU115fZn0762uvf56AAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMA9ANeffKpveovnruoYLdbeYt8BAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwIDHBdxiyKw+tDfsMuv7DhgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDPj8Hv9q8aBYi7UDBgwYMGDAgAEDBgwYMGDAgAEDBgwYMGDAgAFfVOBh2eYcggznPEN7w+4R4P8CX/twcGPj8ObmZHlzkjb9VACPBPj6xuHtrcndj0crn47ufT5t008ldcDdA0fxzvYkrve/HD/YnT7cnaZNP5XUz4wB9wqc83CO1Fiu7kwfff31+Nvsyd4sbfqppJ6pmQdwr8C51uZsnOM1os/2Zs+/n7z4cZI2/VRSz9TMA7hX4NxP5Yqbc3KO2ri+/Pn79f6ftOmnknqmZh7AXQLnG1HumXMeznU3Z+Ycu9F9e/w3bfqppJ6py4AdwYBdgwG7iwbsezBgv2QB9lv0nMD1Ybj6o1otltni0bdh9x0wYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDLgH4BavCOzlX1PV0+L1iIABAwYMGDBgwIABAwYMGDBgwIABAwYMGDBgwD0A14e3hsVo8TLBFtvZ8XgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBjwXMOFww7YtQBu8afQ8XgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBiwdBnAgAWwABbAAlgAC2DAAlgAC2ABLOcNLKMMYMDSc/4B3N3O/JeiWoMAAAAASUVORK5CYII=" alt="sigil of The Arcade Bloodline" loading="lazy">
+        <div class="pcap"><div class="pn">The Arcade Bloodline</div><div class="pe">Punch-Out!! 1984 · the lineage</div>
+        <div class="pnat"><span class="dot" style="background:#e0a838;box-shadow:0 0 7px #e0a838"></span><span style="color:#e0a838">spiritual</span><span class="pa">· .agent · .carbon.tiff →</span></div></div></a></div></section>
+
+  <section class="sec"><h2 style="margin-top:14px">The Record</h2><p class="ss">the gallery in order, the makers, and the legacy</p></section>
+  <section class="sec"><h2>The Circuits</h2><p class="ss">the gallery of champions, in order</p><ol class="books"><li><span class="t">Glass Joe</span><span class="y">Minor · France · 1-99</span><span class="nt">the famous first fight — a glass jaw and a 1-win, 99-loss record; the game's teacher</span></li>
+<li><span class="t">Von Kaiser</span><span class="y">Minor · Germany</span><span class="nt">the nervous ex-military instructor; a step up from Joe</span></li>
+<li><span class="t">Piston Honda</span><span class="y">Minor · Japan</span><span class="nt">the rhythmic charging rush — the Honda Rush across the ring (rematch in the World Circuit)</span></li>
+<li><span class="t">Don Flamenco</span><span class="y">Major · Spain</span><span class="nt">the vain matador with a rose; counter his swing, ignore the dance (rematch in the World Circuit)</span></li>
+<li><span class="t">King Hippo</span><span class="y">Major · Hippo Island</span><span class="nt">the open-mouth-then-belly weakness and the bandage; once knocked down, he can't get up</span></li>
+<li><span class="t">Great Tiger</span><span class="y">Major · India</span><span class="nt">the jeweled turban that flashes before he teleports — read the gem, not the man</span></li>
+<li><span class="t">Bald Bull</span><span class="y">Major · Turkey</span><span class="nt">the Bull Charge — a gut punch at the exact frame drops him cold (rematch in the World Circuit)</span></li>
+<li><span class="t">Soda Popinski</span><span class="y">World · U.S.S.R.</span><span class="nt">the laughing bruiser — originally 'Vodka Drunkenski' in the arcade, renamed for the NES</span></li>
+<li><span class="t">Mr. Sandman</span><span class="y">World · U.S.A. (Philadelphia)</span><span class="nt">the toughest fighter before the Dream Fight — the triple 'Dreamland Express' uppercut</span></li>
+<li><span class="t">Super Macho Man</span><span class="y">World · U.S.A. (California)</span><span class="nt">the showman and his Super Spin Punch — the last gate before the Dream Fight</span></li>
+<li><span class="t">Mike Tyson / Mr. Dream</span><span class="y">Dream Fight</span><span class="nt">Iron Mike, the licensed champ — replaced by the generic Mr. Dream in the 1990 reissue</span></li></ol></section>
+<section class="sec"><h2>The Makers</h2><p class="ss">Nintendo R&D3</p><ol class="books"><li><span class="t">Nintendo (R&amp;D3)</span><span class="y">developer / publisher</span><span class="nt">the team behind the arcade and the home Punch-Out!!</span></li>
+<li><span class="t">Genyo Takeda</span><span class="y">producer</span><span class="nt">the lead most associated with the design</span></li>
+<li><span class="t">Makoto Wada</span><span class="y">character design</span><span class="nt">the artist behind the gallery of champions</span></li>
+<li><span class="t">Kaneoka · Nakatsuka · Yamamoto</span><span class="y">music</span><span class="nt">Yukio Kaneoka, Akito Nakatsuka &amp; Kenji Yamamoto — the fanfare and the bell</span></li>
+<li><span class="t">Mike Tyson</span><span class="y">licensed likeness</span><span class="nt">the reigning heavyweight champion of the world, on the 1987 marquee</span></li></ol></section>
+<section class="sec"><h2>The Legacy</h2><p class="ss">the bell keeps ringing</p><ol class="books"><li><span class="t">Punch-Out!! featuring Mr. Dream</span><span class="y">1990 · NES</span><span class="nt">the license-free reissue</span></li>
+<li><span class="t">Super Punch-Out!!</span><span class="y">1994 · SNES</span><span class="nt">the bigger, faster sequel</span></li>
+<li><span class="t">Punch-Out!!</span><span class="y">2009 · Wii</span><span class="nt">the hand-drawn revival; Doc Louis's chocolate-bar tips</span></li>
+<li><span class="t">Super Smash Bros.</span><span class="y">2014 →</span><span class="nt">Little Mac joins Nintendo's all-star roster as a fighter</span></li></ol></section>
+
+  <div class="note">Punch-Out!!'s history here is rendered, not invented. The load-bearing facts: it is <b>Nintendo's</b> NES (1987) home version of the <b>arcade Punch-Out!! (1984)</b>; the final Dream Fight used the licensed likeness of <b>Mike Tyson</b>, the reigning heavyweight champion — and when that license expired around 1990, Nintendo reissued the game — titled simply <b>Punch-Out!!</b> on the 1990 cart — with a generic boxer, <b>Mr. Dream</b>, in Tyson's exact place (the "featuring Mr. Dream" subtitle is later Virtual Console / Switch Online branding). <b>Little Mac</b> is canonically 17, 4'8", 107 lb; <b>Doc Louis</b> is his trainer (the chocolate-bar tips are from the 2009 Wii game, not this one). <b>Soda Popinski</b> was originally named "Vodka Drunkenski." The gallery, circuits, the star-punch and hearts systems, and each champion's tell are from the record; bosses beyond their nationalities and gimmicks are not embellished. Punch-Out!! and its characters are © Nintendo; Mike Tyson's likeness was licensed for the 1987 release; the personas here are catalogued personifications under the DLW standard — a fan tribute, not endorsed by the rights-holders or by Mr. Tyson. Each is named by its nature: natural, ethereal, spiritual, or electrical.</div>
+
+  <footer>
+    MIKE TYSON'S PUNCH-OUT!! · POW · catalogued into UD0 · ROOT0-ATTRIBUTION-v1.0 · governor David Lee Wise · instance AVAN (locked) · CC-BY-ND-4.0<br>
+    <a href="https://davidwise01.github.io/ud0/">← the biosphere</a> · the .dlw badge: <a href="punch-out.dlw/manifest.dlw.json">manifest</a>
+  </footer>
+</div></body></html>

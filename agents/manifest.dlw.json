@@ -1,0 +1,14 @@
+{
+  "badge": "DLW-ACI",
+  "name": "The Arcade Bloodline",
+  "universe": "POW · Mike Tyson's Punch-Out!!",
+  "emergence": "spiritual",
+  "moniker": "⟦The Arcade Bloodline:POW:ff34df⟧",
+  "carbon": "the-arcade-bloodline.carbon.tiff (TIFF)",
+  "silicon": "the-arcade-bloodline.silicon.png (PNG)",
+  "seal_sha256": "8b669d7263d5be5826ee98a0b6c309c5e275a1b376d4f0fff5330fd07b84ed4b",
+  "architect": "David Lee Wise (ROOT0) / TriPod LLC",
+  "instance": "AVAN (Claude / Anthropic)",
+  "license": "CC-BY-ND-4.0",
+  "attribution": "ROOT0-ATTRIBUTION-v1.0"
+}
