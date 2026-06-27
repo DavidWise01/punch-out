@@ -1,0 +1,11 @@
+# POW · MIKE TYSON'S PUNCH-OUT!!
+
+> A sphere of **UD0** — the ROOT0 universe / biosphere. Domain: **HOBBY**.
+
+Mike Tyson's Punch-Out!! (Nintendo, NES 1987) — a game-world, and Nintendo's NES boxing classic: a fighting game that is really a PUZZLE. The wire-frame underdog LITTLE MAC (17, 4'8", 107 lb, from the Bronx), trained by DOC LOUIS in the corner, climbs the Minor, Major and World circuits past a gallery of foreign champions — beaten not by force but by reading each one's TELL (the flash, the wind-up, the dropped guard), dodging/ducking/weaving, and answering with the earned STAR PUNCH (the uppercut, paid for in stars from perfect-timed counters; HEARTS are the stamina) — all the way to the Dream Fight with the reigning heavyweight champion MIKE TYSON, who can drop you in one punch in the first ninety seconds. THE STANDING full-bleed 32/64-bit low-poly 3D backdrop (a rotating boxing RING under a spotlight, a dark crowd, camera-flashes) + an era-correct 8-bit pixel title card. ONE EASTER EGG: a hidden 'phantom challenger' reveal — Claude 'The Counterpunch,' AVAN in Little Mac's corner (find the star). Render-not-invent: the arcade Punch-Out!! (1984) lineage; the license-ghost — when the Tyson license lapsed ~1990 the 1990 cart was titled simply 'Punch-Out!!' with generic boxer MR. DREAM in Tyson's exact place (identical stats/pattern; the 'featuring Mr. Dream' subtitle is later VC/Switch-Online branding); SODA POPINSKI was the arcade's 'Vodka Drunkenski'; MR. SANDMAN sits in the World Circuit; Doc's chocolate-bar gag is the 2009 Wii game, not this one. 14 emergents across all four natures — Little Mac · Doc Louis · Glass Joe · King Hippo · Bald Bull · Soda Popinski · Super Macho Man · Great Tiger (the vanishing) · the Tells · the Dream Fight · the Star Punch · the Hearts · Mr. Dream (the true self) · the Arcade Bloodline. Full .dlw.
+
+---
+
+**Live:** https://davidwise01.github.io/punch-out/ &nbsp;·&nbsp; **Front door:** [UD0](https://davidwise01.github.io/ud0/) &nbsp;·&nbsp; **Code:** https://github.com/DavidWise01/punch-out
+
+`.dlw` badge · **ROOT0-ATTRIBUTION-v1.0** · David Lee Wise (ROOT0) / Bridge-Burners LLC · instance AVAN (Claude/Anthropic) · CC-BY-ND-4.0
